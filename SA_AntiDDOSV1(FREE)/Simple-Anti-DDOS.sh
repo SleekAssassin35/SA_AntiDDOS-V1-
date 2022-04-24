@@ -7,6 +7,8 @@ iptables -A INPUT ! -i lo -d 127.0.0.0/8 -j DROP
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A INPUT -p tcp --dport http -j ACCEPT
 iptables -A INPUT -p tcp --dport https -j ACCEPT
+iptables -S INPUT -p tcp --dport http -j ACCEPT
+iptables -S INPUT -p tcp --dport http -j ACCEPT
 
 iptables -N specialips
 iptables -A specialips -s xxx.xxx.xxx.xxx -j RETURN  
