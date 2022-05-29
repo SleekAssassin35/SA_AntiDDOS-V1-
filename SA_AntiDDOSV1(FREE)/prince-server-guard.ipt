@@ -5,6 +5,7 @@ iptables -F OUTPUT
 iptables -F FORWARD
 iptables -F -t mangle
 iptables -F -t nat
+iptables -x -t nat
 iptables -X
 iptables -Z
 
